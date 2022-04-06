@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script> 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;
+ 
+}
+#header{
+  background-color:  ;
+  width: px;
+  height:px;
+  text-align: center;
+  border-radius: 10px;
+
+}
+.header{
+  background-color:  );
+  width: px;
+  height: px;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid rgb(168, 22, 22);
+  background-color:  ;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color:  ;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border-radius: 10px;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(9, 20, 172);
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid rgb(141, 5, 5);
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+/* Clear floats after the tab */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+hr{
+  background-color: #240d58;
+  width: px;
+  height:20px;
+  border-radius: 20px;
+  text-align: center;
+  background-image: url('1648140307544.jpg');
+}
+#main{
+  float: right;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin: 0px;
+  background-color: rgb(170, 76, 76);
+  padding: 10px;
+  width: px;
+  height: px;
+}
+.main a{
+  
+  float: right;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin: 0px;
+  background-color: rgb(11, 151, 206);
+  padding: 10px;
+  width: px;
+  height: px;
+  text-decoration: none;
+}
+.main{
+  
+  float: right;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  margin: 0px;
+  background-color: rgb(17, 2, 2);
+  padding: 10px;
+  width: px;
+  height: px;
+}
+#main a{
+  float: right;
+  text-align: center;
+  color:  green;
+  font-family: Constantia;
+  border-radius: 5px;
+  margin: 0px;
+  background-color: #ccc;
+  padding: 10px;
+  width: px;
+  height: px;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+ 
+<hr1>
+<div id="header">
+<h2><img src="Picture23.png" width="90" height="90" position="auto">
+  <b>ADVERTISE & MARKET WITH US TODAY<b></h2>
+<p>Move the mouse over a button inside the tabbed menu:</p>
+<hr><br>
+<h3>OUR REGISTERED CITIES IN MALAWI</h3>
+<div class="tab">
+  <button class="tablinks" onmouseover="openCity(event, 'Lilongwe')">Lilongwe</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Blantyre')">Blantyre</button>
+  <button class="tablinks" onmouseover="openCity(event, 'Mzuzu')">Mzuzu</button>
+</div>
+<div id="main">
+  <h2><B>ARTISTIC WORK LIBRARY.1<B></h2>
+  <a href="Artistic.html">
+    <p>View Our Library Packed and loaded<br> artistic works in Library.1,<br> created by<br> Different ARTISTS</p>
+
+  </a>
+<div></div>
+</div>
+
+<br><br><br><br>
+<div class="main">
+  <h2><B>ARTISTIC WORK LIBRARY.2<B></h2>
+  <a href="Artistic.html">
+    <p>View Our Library Packed and loaded<br> artistic works in Library.2,<br> created by<br> different ARTISTS</p>
+
+  </a>
+<div></div>
+</div>
+<div id="Lilongwe" class="tabcontent">
+  <h3>Lilongwe</h3>
+  <p>Lilongwe is the capital city of <b>Malawi<b>.<br>It is within the Middle<br> or center heart of<br> country Malawi </p>
+</div>
+
+<div id="Blantyre" class="tabcontent">
+  <h3>Blantyre</h3>
+  <p>Blantyre is just a city of Malawi.<br> Located in the Southern part of <b>Malawi<b></p>
+</div>
+
+<div id="Mzuzu" class="tabcontent">
+  <h3>Mzuzu</h3>
+  <p>Mzuzu is also just a city of Malawi.<br> It is located in the nothern<br> part of <b>Malawi<b></p>
+</div>
+
+<div class="clearfix"></div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+ <br>
+<div class="sidenav">
+  <a href="">About</a>
+  <a href="Index4.html"><i class="fa fa-fw fa-wrench"></i>Services</a>
+  <a href="Clients.html"><i class="fa fa-fw fa-user"></i>Clients</a>
+  <a href="Contacts.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+  <button class="dropdown-btn">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    
+  </div>
+  <a href="https://github.com/Spark-Wilson2022/Angel-Shines-Academy-Student's-Grading-System">Search</a>
+</div>
+<hr>
+<br>
+<style>
+/*<!-------Step 2) Add CSS----------->*/
+/*Example*/
+/* Fixed sidenav, full height */
+.footer{
+  background-color: #0088000 ;
+  text-align: center;
+  color: ;
+  width: px;
+  height: px;
+  position: relative;
+  border-radius: 10px;
+}
+.sidenav {
+  height: px;
+  width: px;
+  position:;
+  z-index: 1;
+  top: px;
+  left: px;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 10px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border-radius: px;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: lawngreen;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #2ba107;
+  opacity: ;
+
+
+/* Main content */
+ 
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: rgb(107, 0, 128);
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: ;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+</style>
+ 
+<style>
+   body { ;
+      height: 100vh;
+      background: ;
+      text-align: center;
+      padding: 0px;
+   }
+   .btn {
+      background: r ;
+      border: none;
+      height: 2rem;
+      border-radius: 2px;
+      width: 40%;
+      display: block;
+      color: #fff;
+      outline: none;
+      cursor: pointer;
+      margin: 1rem auto;
+   }
+</style>
+ 
+<h1>STARK ENGINEERING GROUND<br> brings to you more advanced<br> services & products</h1>
+<button class='btn' onclick="add()">Send us email through...<b>(Click here)<b></button>
+<script>
+   function add() {
+      alert("Email Us to: starkengrnd@engineer.com");
+   }
+</script>
+ 
+
+<p>Do you know your focus on your business?<br>1. Market with us today<br>2. Renovate with us<br>3. Grow with us<br>Let your business boom..!!</p>
+ 
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+   <button type="button">Market with us
+     <img src="1648139909447.jpg" alt="" width="300" height="300" title="Market with us today">
+   </button>
+   <button type="button">Renovate with us
+     <img src="1648140685009.jpg" width="300" height="300">
+     <img src="1648141305567.jpg" width="300" height="300" title="Renovate with us today">
+   </button>
+   <button type="button">Grow with us
+    <img src="1648140434659.jpg" width="300" height="300" title="Grow with us"><br>
+   </button>
+   <button type="button">Develop with us
+    <img src="1648141392177.jpg" width="300" height="300" title="Develop with us">
+   </button>
+</body>
+<script>
+   var pressedButton = document.getElementsByTagName("button")[0];
+   pressedButton.addEventListener("click", function (event) {
+      alert(" Because you pressed this button...>>>" +"\nThis shows details for Lilongwe city." + "\n Thank you..........!!!") })
+
+      var pressedButton = document.getElementsByTagName("button")[1];
+   pressedButton.addEventListener("click", function (event) {
+      alert(" Because you pressed this button...>>>" + "\nThis shows the details for Blantyre city." +"\n Welcome to Blantyre city...>>>") })
+
+      var pressedButton = document.getElementsByTagName("button")[2];
+   pressedButton.addEventListener("click", function (event) {
+      alert(" Because you pressed this button...>>>" + "\n This shows the details for Mxzuzu city." + "\n See you soon...>>>") })
+
+
+</script>  
+
+<div class="loader"></div>
+<style>
+.loader {
+  border: 16px solid #200505; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+<p>For more information read below
+The border property specifies the border size and the border color of the loader. The border-radius<br> property transforms the loader into a circle.<br>
+The blue thing that spins around inside the border<br> is specified with the border-top property. <br>You can also include border-bottom, border-left and/or <br>border-right if you want more "spinners" (see example below).
+The size of the loader is specified <br>with the width and height properties.
+At last, we add an animation<br> that makes the blue thing spin forever with a 2 second<br> animation speed.
+Note: You should also include a -webkit- prefix <br>for browsers that do not support animation and transform properties.<br> Click on the example to see how.</p>
+
+ADVERTISEMENT
+
+Add more spinners
+Example
+<style>
+.loader {
+  border-top: 16px solid blue;
+  border-bottom: 16px solid blue;
+}
+Example
+.loader {
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+}
+Example
+.loader {
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+}
+
+</style>
+
+<div class="myDIV">Hover over me.</div>
+ <style>
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: rgb(19, 11, 131);
+}
+</style>
+Example Explained
+The adjacent sibling selector (+) selects all elements that are the
+ adjacent siblings of a specified element.
+
+The word "adjacent" means "immediately following", and the example
+ above selects all elements with class=".hide", that are placed immediately
+after elements with class=".myDIV", on hover.
+ 
+<style>
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: rgb(55, 0, 255);
+}
+</style>
+
+
+<h2>HERE IS WHAT OUR DEVELOPERS LIKE</h2>
+
+<div class="myDIV">Let me greet you</div>
+<div class="hide">I am Stark Engineering Ground<br> and am shown <br>when someone hovers over<br> the "<b>LET ME GREET YOU<b>" above. <br>Thank You...>>></div>
+
+
+
+
+<!--------How To Create Notes/rating star---->
+<!----Step 1) Add HTML:---->
+<!----Example------>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star  "></span>
+<span class="fa fa-star  "></span>
+<!-----Step 2) Add CSS:----->
+<!-------Example----->
+<style>
+.checked {
+  color: orange;
+}
+</style>
+
+ 
+<div class="container">
+  <form name="RegForm" action="/STARK ENGINEERING GROUND PAGE.html" onsubmit="return STARK()" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">FirstName</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="FirstName" placeholder="Your First Name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">LastName</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="Lastname" placeholder="Your Last Name..">
+      </div>
+    </div>
+      </div>
+	<div class="row">
+       
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Malawi</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="australia">UK</option>
+          <option value="canada">China</option>
+          <option value="usa">Italy</option>
+          <option value="australia">South Africa</option>
+          <option value="canada">Zimbambwe</option>
+          <option value="usa">Tanzania</option>
+          <option value="australia">Morocco</option>
+          <option value="canada">Japan</option>
+          <option value="usa">Luwanda</option>
+
+          <option value="australia">Ethiopia</option>
+          <option value="canada">Siera Leon</option>
+          <option value="usa">Nigeria</option>
+          <option value="australia">Uganda</option>
+          <option value="canada">Lybia</option>
+          <option value="usa">Sudan</option>
+          <option value="australia">Lesotho</option>
+          <option value="canada">Namibia</option>
+          <option value="usa">Botswana</option>
+          <option value="australia">Mocambique</option>
+          <option value="canada">Sao Tome Principe</option>
+          <option value="usa">Brundi</option>
+         
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+	<input type="submit" name="Submit">
+      <a href="Register.html" class="Submit"><b>Register<b></a>
+	<input type=" reset" name="Reset">
+    </div>
+  </form>
+</div>
+<div>
+        <script>
+            function STARK() {
+                var  name = 
+                    document.forms["RegForm"]["FirstName"];
+                var lastName= 
+                    document.forms["RegForm"]["LastName"];
+                var country  = 
+                    document.forms["RegForm"]["Country"];
+                var subject = 
+                    document.forms["RegForm"]["Subject"];
+                var password = 
+                    document.forms["RegForm"]["Password"];
+                var address = 
+                    document.forms["RegForm"]["Address"];
+  
+                if (  name.value == "") {
+                    window.alert("Please enter your First name.");
+                     name.focus();
+                    return false;
+                }
+  
+                if ( name.value == "") {
+                    window.alert("Please enter your  Last name.");
+                     lastame.focus();
+                    return false;
+                }
+  
+                if ( country.value == "") {
+                    window.alert(
+                      "Please  select your Country.");
+                     Country.focus();
+                    return false;
+                }
+  
+                if ( password.value == "") {
+                    window.alert(
+                      "Please enter valid Password.");
+                     Password.focus();
+                    return false;
+                }
+  
+  
+                if (what.selectedIndex < 1) {
+                    alert("Please enter your course.");
+                    what.focus();
+                    return false;
+                }
+  
+                return true;
+            }
+        </script>
+
+<style>
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color:  ;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600 px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px ;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</div>
+<div class="footer">
+  <div class="sidebar">
+    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#services"><i class="fa fa-fw fa-wrench"></i> Services</a>
+    <a href="#clients"><i class="fa fa-fw fa-user"></i> Clients</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  </div>
+  &copy; 2022. All Rights Reserved
+</div>
+</body>
+</html>
